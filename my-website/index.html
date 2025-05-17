@@ -1,92 +1,70 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BillyMovies</title>
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="preload" href="css/home.css" as="style">
-  <link rel="preload" href="js/home.js" as="script">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script defer src="js/home.js"></script>
-
-
-  <script type="text/javascript" data-cfasync="false">
-/*<![CDATA[/* */
-(function(){var w=window,n="ce6ff38eba96fd13d83dfa334fd06d18",g=[["siteId",238+490-414*924+5581870],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],x=["d3d3LmFudGlhZGJsb2Nrc3lzdGVtcy5jb20vYWNicEFuaW1hdGVkSGVhZGVyLm1pbi5jc3M=","ZDNjb2Q4MHRobjdxbmQuY2xvdWRmcm9udC5uZXQvWEdEL2ZlbGRhcmlvbi1hamF4Lm1pbi5qcw=="],b=-1,c,a,d=function(){clearTimeout(a);b++;if(x[b]&&!(1773405031000<(new Date).getTime()&&1<b)){c=w.document.createElement("script");c.type="text/javascript";c.async=!0;var j=w.document.getElementsByTagName("script")[0];c.src="https://"+atob(x[b]);c.crossOrigin="anonymous";c.onerror=d;c.onload=function(){clearTimeout(a);w[n.slice(0,16)+n.slice(0,16)]||d()};a=setTimeout(d,5E3);j.parentNode.insertBefore(c,j)}};if(!w[n]){try{Object.freeze(w[n]=g)}catch(e){}d()}})();
-/*]]>/* */
-</script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeFlixx Inspired</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="navbar">
-    <img src="logo.png" alt="LOGO HERE" />
+  <header class="navbar">
+    <img src="logo.png" alt="BillyMovies" class="logo">
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <input type="text" class="search-bar" placeholder="Search..." onfocus="openSearchModal()" />
+      <a href="#">Home</a>
+      <a href="#">Trending</a>
+      <a href="#">Categories</a>
+      <input type="text" class="search-bar" placeholder="Search...">
     </div>
-  </div>
+  </header>
 
-  <div class="banner" id="banner">
-    <h1 id="banner-title"></h1>
-  </div>
+  <section class="banner" style="background-image: url('banner.jpg');">
+    <h1>Featured Movie Title</h1>
+  </section>
 
-  <div class="row">
-    <h2>Trending Movies</h2>
-    <div class="list" id="movies-list"></div>
-  </div>
-
-  <div class="row">
-    <h2>Trending TV Shows</h2>
-    <div class="list" id="tvshows-list"></div>
-  </div>
-
-  <div class="row">
-    <h2>Trending Anime</h2>
-    <div class="list" id="anime-list"></div>
-  </div>
+  <section class="row">
+    <h2>Popular Movies</h2>
+    <div class="list">
+      <img src="movie1.jpg" alt="Movie 1">
+      <img src="movie2.jpg" alt="Movie 2">
+      <img src="movie3.jpg" alt="Movie 3">
+    </div>
+  </section>
 
   <div class="modal" id="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()" style="color: red;">&times;</span>
+      <span class="close" id="closeModal">&times;</span>
       <div class="modal-body">
-  <img id="modal-image" src="" alt="" />
-  <div class="modal-text">
-    <h2 id="modal-title"></h2>
-    <div class="stars" id="modal-rating"></div>
-    <p id="modal-description"></p>
-  </div>
-</div>
-      
-      <div class="server-selector">
-        <label for="server">Change Server:</label>
-        <select id="server" onchange="changeServer()">
-          <option value="vidsrc.cc">Vidsrc.cc</option>
-          <option value="vidsrc.me">Vidsrc.me</option>
-          <option value="player.videasy.net">Player.Videasy.net</option>
-        </select>
+        <img src="movie1.jpg" alt="Movie Poster">
+        <div class="modal-text">
+          <h2>Movie Title</h2>
+          <p>Description of the movie goes here. Action, Drama, etc.</p>
+          <p class="stars">★★★★☆</p>
+        </div>
       </div>
-      <iframe id="modal-video" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 
-  <div class="search-modal" id="search-modal">
-    <span class="close" onclick="closeSearchModal()" style="color: red;">&times;</span>
-    <input type="text" id="search-input" placeholder="Search for a movie or show..." oninput="searchTMDB()" />
-    <div class="results" id="search-results"></div>
-  </div>
-
-<footer class="footer">
-  <div class="footer-content">
-    <p>&copy; 2025 My Website. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#">Disclaimer</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 FreeFlixx Clone. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-  
+  <script>
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('closeModal');
+    document.querySelectorAll('.list img').forEach(img => {
+      img.onclick = () => modal.style.display = 'flex';
+    });
+    closeModal.onclick = () => modal.style.display = 'none';
+    window.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+  </script>
 </body>
+</html>
+
