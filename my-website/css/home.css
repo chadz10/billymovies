@@ -9,12 +9,22 @@
     }
 
 .logo {
-  height: 50px;
+   font-size: 32px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e63946;
+  text-align: left;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #f1faee, #a8dadc);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  color: #1d3557;
 }
 
     .navbar img { height: 40px; }
