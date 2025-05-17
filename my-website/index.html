@@ -19,6 +19,61 @@
 
 </head>
 
+  <!-- Font Awesome for movie icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  .logo {
+    font-size: 36px;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #00000050;
+    animation: popIn 1s ease forwards;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 30px;
+  }
+
+  .logo:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    color: #f1faee;
+  }
+
+  @keyframes popIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .logo i {
+    font-size: 40px;
+    color: #ffffff;
+    animation: bounce 1.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+</style>
+
   <style>
   .logo {
     font-size: 36px;
