@@ -27,6 +27,37 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
 
+.nav-home {
+  font-weight: bold;
+  color: #ff004f;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+.nav-home::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff004f;
+  transition: width 0.3s;
+}
+
+.nav-home:hover {
+  color: #fff;
+  background: rgba(255, 0, 79, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-home:hover::after {
+  width: 100%;
+}
+
 .logo {
     font-size: 36px;
   font-weight: 800;
