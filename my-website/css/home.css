@@ -2,6 +2,25 @@
     body { font-family: Arial, sans-serif; background: #111; color: #fff;
            scroll-behavior: smooth;}
 
+.site-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ff004f, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.site-title:hover {
+  transform: scale(1.05);
+  text-shadow: 2px 2px 12px rgba(255, 0, 79, 0.8);
+}
+
     .navbar {
       display: flex; justify-content: space-between; align-items: center;
       padding: 15px 20px; background: linear-gradient(90deg, #141e30, #243b55);
@@ -195,6 +214,13 @@
     align-items: flex-start;
     padding: 10px 15px;
   }
+
+ @media (max-width: 480px) {
+  .site-title {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+}
 
   .nav-links {
     flex-wrap: wrap;
